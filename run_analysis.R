@@ -44,4 +44,5 @@ run_analysis <- function(){
 ## Creating  tidy data set with the average of each variable for each activity and each subject
   data <- group_by(data, Subject, Activity) %>% summarise_each(list(mean))
 ## Creating txt file
-  write.table(data, file = "tidy_data.txt", row.names = FALSE)}
+  write.table(data, file = "tidy_data.txt", row.names = FALSE)
+}
